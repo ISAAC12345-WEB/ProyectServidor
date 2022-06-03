@@ -23,7 +23,7 @@ public class ClienteController {
 	@Autowired
 	private ClienteService service;
 	
-	@GetMapping("/lista")
+	@GetMapping("/lista") 
 	public List<Cliente> listar(){
 		return service.listAll();
 	}
