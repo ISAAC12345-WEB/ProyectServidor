@@ -18,7 +18,19 @@ public class ProductoService {
 		return repository.findAll();
 	}
 	
-	public void save(Producto bean) {
-		repository.save(bean);
+	public Producto findById(Integer id) {
+		return repository.findById(id).orElse(null);
+	}
+	
+	public Producto save(Producto bean) {
+		return repository.save(bean);
+	}
+	
+	public Producto update(Producto bean) {
+		return repository.save(bean);
+	}
+	
+	public void delete(Integer id) {
+		repository.deleteById(id);
 	}
 }
