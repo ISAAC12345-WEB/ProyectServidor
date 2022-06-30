@@ -18,6 +18,14 @@ public class EmpleadoService {
 		return repository.findAll();
 	}
 	
+	public Empleado findById(Integer id) {
+		return repository.findById(id).orElse(null);
+	}
+	
+	public List<Empleado> findAllByNombres(String nombres){
+		return repository.findAllByNombresList(nombres);
+	}
+	
 	public void save(Empleado bean) {
 		repository.save(bean);
 	}

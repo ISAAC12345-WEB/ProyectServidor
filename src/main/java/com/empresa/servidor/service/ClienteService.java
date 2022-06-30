@@ -18,6 +18,14 @@ public class ClienteService {
 		return repository.findAll();
 	}
 	
+	public Cliente findById(Integer id) {
+		return repository.findById(id).orElse(null);
+	}
+	
+	public List<Cliente> findAllByNombres(String nombres){
+		return repository.findAllByNombresList(nombres);
+	}
+	
 	public void save(Cliente bean) {
 		repository.save(bean);
 	}

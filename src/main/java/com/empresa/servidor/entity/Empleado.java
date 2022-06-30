@@ -23,7 +23,7 @@ public class Empleado {
 	private String telefono;
 	@Column(name = "Estado")
 	private String estado;
-	@Column(name = "User")
+	@Column(name = "username")
 	private String user;
 	
 	
